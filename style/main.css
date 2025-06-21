@@ -1,0 +1,376 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fff0f5;
+}
+
+.song {
+  visibility: hidden;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  visibility: hidden;
+  padding-bottom: 100px; /* TAMBAHKAN ini */
+}
+
+.container > div {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 20vh;
+}
+
+.container > .custom-message {
+  top: 10vh;
+}
+
+.one {
+  font-size: 4.5rem;
+}
+
+.two {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+  .three {
+    font-size: 2.2rem; /* Perkecil dari 3rem agar pas di HP */
+    padding: 0 15px;    /* Tambahkan padding agar tidak mepet tepi */
+    line-height: 1.2;
+  }
+
+
+.four {
+  position: relative;
+  z-index: 10;
+}
+
+.four .text-box {
+  border: 3px solid #aaa;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  width: 600px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.text-box p {
+  margin: 0;
+  text-align: left;
+}
+
+.text-box span {
+  visibility: hidden;
+}
+
+.fake-btn {
+  background-color: rgb(21, 161, 237);
+  border-radius: 3px;
+  bottom: -50px;
+  color: #fff;
+  padding: .5rem 1rem;
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  outline: 0;
+  border: 0;
+}
+
+.fake-btn.disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.five p {
+  font-size: 2rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.idea-3 strong {
+  border-radius: 3px;
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.five .idea-5 {
+  font-size: 4rem;
+}
+
+.idea-5 span, .idea-6 span, .wish-hbd span {
+  display: inline-block;
+}
+
+.idea-6 span {
+  font-size: 15rem;
+}
+
+.six {
+  position: relative;
+  top: -50px; /* GANTI dari 0 atau -30px */
+  z-index: 1;
+  text-align: center;
+  padding-bottom: 80px; /* tambahkan agar bawah lega */
+}
+
+
+
+
+
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-picture {
+  display: block;
+  height: 230px; /* KECILKAN dari 350px */
+  max-width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.hat {
+  position: absolute;
+  top: -50px; /* NAIKKAN sedikit dari -75px */
+  left: 50%;
+  transform: translateX(-50%) rotate(-15deg);
+  width: 60px; /* KECILKAN dari 80px */
+}
+
+
+
+.wish {
+  margin-top: 20px;
+  padding: 0 15px;
+  overflow-wrap: break-word;
+}
+
+.wish-hbd {
+  font-size: 2.3em;
+  margin: 0;
+  text-transform: uppercase;
+  color: #ff69b4;
+}
+
+.wish h5 {
+  font-size: 1.3rem;
+  font-weight: lighter;
+  margin: 10px 0 0;
+  color: #333;
+  line-height: 1.3;
+  word-wrap: break-word;
+}
+
+
+.nine p {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+#replay {
+  cursor: pointer;
+  z-index: 3;
+}
+
+.baloons img {
+  display: inline-block;
+  position: absolute;
+}
+
+.baloons img:nth-child(even) {
+  left: -10%;
+}
+
+.baloons img:nth-child(odd) {
+  right: -10%;
+}
+
+.baloons img:nth-child(3n + 0) {
+  left: 30%;
+}
+
+.seven, .eight {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  pointer-events: none;
+}
+
+.eight svg {
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 25px;
+  z-index: -1;
+}
+
+.eight svg:nth-child(1) { fill: #bd6ecf; left: 5vw; top: 7vh; }
+.eight svg:nth-child(2) { fill: #7dd175; left: 35vw; top: 23vh; }
+.eight svg:nth-child(3) { fill: #349d8b; left: 23vw; top: 33vh; }
+.eight svg:nth-child(4) { fill: #347a9d; left: 57vw; top: 43vh; }
+.eight svg:nth-child(5) { fill: #c66053; left: 7vw; top: 68vh; }
+.eight svg:nth-child(6) { fill: #bfaa40; left: 77vw; top: 42vh; }
+.eight svg:nth-child(7) { fill: #e3bae8; left: 83vw; top: 68vh; }
+.eight svg:nth-child(8) { fill: #8762cb; left: 37vw; top: 86vh; }
+.eight svg:nth-child(9) { fill: #9a90da; left: 87vw; top: 94vh; }
+
+.custom-message.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+  z-index: -1;
+}
+
+.custom-message.show {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1;
+}
+.custom-message {
+  padding: 15px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff0f5;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 800px;         /* LEBAR DIKECILKAN */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e91e63;
+  color: #444;
+  line-height: 1.4;
+  position: relative;
+  font-size: 16px;         /* FONT DIKECILKAN */
+  margin-bottom: 150px; /* dari 100px jadi 150px */
+}
+
+.custom-message h2 {
+  font-size: 1.1rem;         /* JUDUL LEBIH KECIL*/
+}
+
+
+@media screen and (max-width: 768px) {
+  .custom-message h2 {
+    font-size: 1.5rem;
+  }
+  .custom-message {
+    padding: 20px 15px;
+    font-size: 0.95rem;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .container > div {
+    top: 10vh;
+  }
+
+  .four .text-box {
+    width: 90%;
+  }
+
+  .text-box p, .custom-message {
+    font-size: 12px;
+  }
+
+  .text-box .fake-btn {
+    font-size: 1rem;
+  }
+
+  .five .idea-5 {
+    font-size: 30px;
+  }
+
+  .idea-5 span {
+    display: block;
+  }
+
+  .idea-6 span {
+    font-size: 10rem;
+  }
+  .profile-picture {
+    height: 200px;
+  }
+
+  .hat {
+    width: 45px;
+    top: -50px;
+  }
+
+
+  .wish-hbd {
+    font-size: 1.8em;
+  }
+
+  .wish h5 {
+    font-size: 1.1rem;
+  }
+
+  .nine {
+    margin-top: 80px; /* menambah jarak dari atas */
+  }
+  
+  .nine p {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 10px 0; /* kasih jarak antar paragraf */
+  }
+  .fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+  
+  .custom-message {
+  width: 90%;
+  } 
+
+  .custom-message h2 {
+  font-size: 1.2rem;
+  }
+
+  .watermark {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  color: #999;
+  opacity: 0.6;
+  z-index: 999;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+}
